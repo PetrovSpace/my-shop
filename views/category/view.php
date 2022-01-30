@@ -9,6 +9,7 @@
 </div>
 <!-- //products-breadcrumb -->
 <!-- //products-breadcrumb -->
+<!-- // Изменения с Пк Наташи -->
 
 <!-- banner -->
 <div class="banner">
