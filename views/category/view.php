@@ -8,6 +8,7 @@
     </div>
 </div>
 <!-- //products-breadcrumb -->
+<!-- //products-breadcrumb -->
 
 <!-- banner -->
 <div class="banner">
