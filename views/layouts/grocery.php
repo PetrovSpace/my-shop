@@ -51,9 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Корзина</h4>
                     </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
+                    <div class="modal-body"></div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
                         <a href="<?= \yii\helpers\Url::to(['cart/checkout']) ?>" class="btn btn-success">Оформить заказ</a>
@@ -62,13 +60,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
         </div>
-        <!--<form action="#" method="post" class="last">
-            <fieldset>
-                <input type="hidden" name="cmd" value="_cart" />
-                <input type="hidden" name="display" value="1" />
-                <input type="submit" name="submit" value="View your cart" class="button" />
-            </fieldset>
-        </form>-->
     </div>
     <div class="w3l_header_right">
         <ul>
