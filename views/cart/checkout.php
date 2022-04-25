@@ -15,10 +15,10 @@
     <div class="w3l_banner_nav_right">
         <!-- about -->
         <div class="privacy about">
-            <h3>Chec<span>kout</span></h3>
+            <h3><span>Проверка заказа</span></h3>
             <?php if(!empty($session['cart'])): ?>
                 <div class="checkout-right">
-                    <h4>Your shopping cart contains: <span><?= $session['cart.qty'] ?> Product(s)</span></h4>
+                    <h4>Твоя корзина содержит: <span><?= $session['cart.qty'] ?> Продукт(а)</span></h4>
                     <div class="cart-table">
                         <div class="overlay">
                             <i class="fa fa-refresh fa-spin"></i>
@@ -26,12 +26,12 @@
                         <table class="timetable_sub">
                             <thead>
                             <tr>
-                                <th>SL No.</th>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Remove</th>
+                                <th>№</th>
+                                <th>Продукт</th>
+                                <th>Кол-во</th>
+                                <th>Название продукта</th>
+                                <th>Цена</th>
+                                <th>Удалить</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -67,12 +67,13 @@
                 </div>
                 <div class="checkout-left">
                     <div class="col-md-4 checkout-left-basket">
-                        <h4>Continue to basket</h4>
+
+                        <button onclick="getCart()" type="button" class="submit check_out" >Вернуться в корзину</button>
                         <ul>
                             <?php foreach($session['cart'] as $item): ?>
                                 <li><?= $item['title'] ?> <i>-</i> <span>$<?= $item['price'] * $item['qty'] ?> </span></li>
                             <?php endforeach; ?>
-                            <li>Total <i>-</i> <span>$<?= $session['cart.sum'] ?></span></li>
+                            <li>Итого <i>-</i> <span>$<?= $session['cart.sum'] ?></span></li>
                         </ul>
                     </div>
                     <div class="col-md-8 address_form_agile">

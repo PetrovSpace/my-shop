@@ -84,11 +84,18 @@ class CartController extends AppController
             $order->total = $session['cart.sum'];
             $transaction = \Yii::$app->getDb()->beginTransaction();
             if(!$order->save() || !$order_product->saveOrderProducts($session['cart'], $order->id)){
-                \Yii::$app->session->setFlash('error', 'Ошибка оформления заказа');
+                $session->setFlash('error', 'Ошибка оформления заказа');
                 $transaction->rollBack();
             }else{
                 $transaction->commit();
-                \Yii::$app->session->setFlash('success', 'Ваш заказ принят');
+                $session->setFlash('success', 'Ваш заказ принят');
+
+                \Yii::$app->mailer->compose('order', ['session' => $session])
+                    ->setFrom([\Yii::$app->params['senderEmail'] => \Yii::$app->params['senderName']])
+                    ->setTo([$order->email, \Yii::$app->params['adminEmail']])
+                    ->setSubject('Заказ на сайте')->send();
+
+
                 $session->remove('cart');
                 $session->remove('cart.qty');
                 $session->remove('cart.sum');
