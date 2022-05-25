@@ -93,7 +93,7 @@ class CartController extends AppController
                 \Yii::$app->mailer->compose('order', ['session' => $session])
                     ->setFrom([\Yii::$app->params['senderEmail'] => \Yii::$app->params['senderName']])
                     ->setTo([$order->email, \Yii::$app->params['adminEmail']])
-                    ->setSubject('Заказ на сайте')->send();
+                    ->setSubject('Заказ на сайте №' . $order->id)->send();
 
 
                 $session->remove('cart');
