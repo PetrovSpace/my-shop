@@ -46,15 +46,15 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
-//            'transport' => [
-//                'class' => 'Swift_SmtpTransport',
-//                'host' => 'srv11.host-food.ru',
-//                'username' => 'informer@h156075.srv11.test-hf.su',
-//                'password' => 'h156075_foryii2',
-//                'port' => '465',
-//                'encryption' => 'ssl',
-//            ]
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'srv11.host-food.ru',
+                'username' => 'informer@h156075.srv11.test-hf.su',
+                'password' => 'h156075_foryii2',
+                'port' => '465',
+                'encryption' => 'ssl',
+            ]
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
