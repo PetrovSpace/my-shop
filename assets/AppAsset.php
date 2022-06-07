@@ -29,6 +29,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
 //        'js/jquery-1.11.1.min.js',
+        'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',
         'js/bootstrap.min.js',
         'js/move-top.js',
         'js/easing.js',

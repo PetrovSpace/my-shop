@@ -1,7 +1,7 @@
 <?php
 
 use app\assets\AppAsset;
-use yii\helpers\Html;
+use kartik\helpers\Html;
 
 AppAsset::register($this);
 ?>
@@ -189,7 +189,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="clearfix"> </div>
         </div>
         <div class="wthree_footer_copy">
-            <p>© 2016 Grocery Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p>© 2022 Grocery Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
         </div>
     </div>
 </div>
