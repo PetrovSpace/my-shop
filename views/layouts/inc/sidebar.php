@@ -1,8 +1,6 @@
 <?php
 
 use app\models\Category;
-use kartik\widgets\SideNav;
-
 ?>
 
 <div class="w3l_banner_nav_left">
@@ -18,22 +16,7 @@ use kartik\widgets\SideNav;
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-                <?= \app\components\MenuWidget::widget([
-                    'tpl' => 'menu',
-                    'ul_class' => 'nav navbar-nav nav_1',
-                ]) ?>
-                <?= \kartik\sidenav\SideNav::widget([
-                    'type' => \kartik\sidenav\SideNav::TYPE_SECONDARY,
-                    'heading' => 'Категории',
-                    'items' => [
-                            ['url' => '#',
-                            'label' => 'First category',
-                            'icon' => 'home'],
-                            ['url' => '#',
-                            'label' => 'Second category',
-                            'icon' => 'info-sign'],
-                    ],
-                ]) ?>
+                <?= \app\components\MenuWidget::widget() ?>
             </div><!-- /.navbar-collapse -->
         </nav>
     </div>
